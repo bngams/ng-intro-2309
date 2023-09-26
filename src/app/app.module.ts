@@ -7,6 +7,7 @@ import { ExponentialStrengthPipe } from './pipes/exponentialStrength.pipe';
 import { HeaderComponent } from './layout/header/header.component';
 import { IntroComponent } from './pages/intro/intro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   // customelements.define('app-root', ...)
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule, // availble for all this module
   ],
   providers: [],
   // composants à charger au démarrage

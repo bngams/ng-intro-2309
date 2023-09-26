@@ -1,0 +1,16 @@
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+// id="main-menu"
+#main-menu {
+  list-style-type: none;
+  display: flex;
+}
+
+// class="menu.item"
+.menu-item {
+  margin-left: 15px;
+  cursor: pointer;
+}
