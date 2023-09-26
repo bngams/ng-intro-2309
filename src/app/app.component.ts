@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; // reférence les classes ou fichiers qu'on utilise
 
+// @ => decorator
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-root', // balise
+  // template:`<h1>Hello</h1>`,
+  // styles:[`h1{ color: red}`]
+  templateUrl: './app.component.html', // vue
+  styleUrls: ['./app.component.scss'] // vue (css)
 })
-export class AppComponent {
-  title = 'my-app';
+// export <=> public
+export class AppComponent { // controller
+
+  today = new Date();
+  display = true;
+
+  words = ['hello', 'world', '!!!'];
+
+  get title(){
+    return 'my-app';
+  }
+
+  toggleDisplay(): void {
+    this.display = !this.display;
+  }
 }
