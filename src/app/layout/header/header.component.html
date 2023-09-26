@@ -9,6 +9,11 @@
       <!-- routerLink can be done everywhere => better on a (HTML convention) -->
       <li class="menu-item" routerLink="/intro"  routerLinkActive="active">Intro</li>
       <li class="menu-item"><a routerLink="/products" routerLinkActive="active">Products </a></li>
+      <li class="menu-item">
+        <button mat-fab color="accent" routerLink="/cart" routerLinkActive="active">
+          <mat-icon aria-hidden="false" aria-label="Cart" fontIcon="shopping_cart"></mat-icon>
+        </button>
+      </li>
       <li class="menu-item"><a routerLink="/admin" routerLinkActive="active">Admin </a></li>
     </ul>
   </nav>

@@ -14,6 +14,7 @@ const routes: Routes = [
   // custom preload strategies => eg: preload all offline modules
   { path: 'admin', canActivate: [ /* check module acccess */],  data: { offline: true }, loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule) },
   { path: 'products', loadChildren: () => import('./modules/product/product.module').then(m => m.ProductModule) },
+  { path: 'cart', loadChildren: () => import('./modules/cart/cart.module').then(m => m.CartModule) },
   // ** => last element (like regex)
   { path: '**', component: NotFoundComponent }
 ];
