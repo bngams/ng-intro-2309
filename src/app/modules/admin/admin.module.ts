@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ThemeModule } from 'src/app/theme.module';
+import { ThemeModule } from 'src/app/modules/theme.module';
 
 @NgModule({
   declarations: [

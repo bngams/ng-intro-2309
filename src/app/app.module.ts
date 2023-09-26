@@ -9,8 +9,8 @@ import { IntroComponent } from './pages/intro/intro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { MATERIAL_MODULES } from './material.barrel';
-import { ThemeModule } from './theme.module';
+import { MATERIAL_MODULES } from './modules/material.barrel';
+import { ThemeModule } from './modules/theme.module';
 
 @NgModule({
   // customelements.define('app-root', ...)
