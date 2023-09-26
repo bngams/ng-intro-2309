@@ -7,9 +7,10 @@ import { ExponentialStrengthPipe } from './pipes/exponentialStrength.pipe';
 import { HeaderComponent } from './layout/header/header.component';
 import { IntroComponent } from './pages/intro/intro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MATERIAL_MODULES } from './material.barrel';
+import { ThemeModule } from './theme.module';
 
 @NgModule({
   // customelements.define('app-root', ...)
@@ -26,7 +27,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule, // availble for all this module
+    ThemeModule // "Shared" Module => export to feature to multiple parts
+    // ...MATERIAL_MODULES => barrel
     // AdminModule, // => NO => lazy load
   ],
   providers: [],
