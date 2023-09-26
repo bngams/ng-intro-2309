@@ -1,10 +1,29 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './pages/home/home.component';
+import { IntroComponent } from './pages/intro/intro.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
-const routes: Routes = [];
+// type Routes = Route[]
+// Routes <=> Route[]
+const routes: Routes = [
+  // redirectTo => pathMatch mandatory
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent },
+  { path: 'intro', component: IntroComponent },
+  // custom preload strategies => eg: preload all offline modules
+  { path: 'admin', canActivate: [ /* check module acccess */],  data: { offline: true }, loadChildren: () => import('./modules/admin/admin.module').then(m => m.AdminModule) },
+  // ** => last element (like regex)
+  { path: '**', component: NotFoundComponent }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  // load features from RouterModule (<router-outlet.....>)
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
+  // exports <=> public (exposer ou exporter <=> return )
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

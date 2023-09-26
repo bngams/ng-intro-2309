@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-intro',
@@ -15,7 +16,15 @@ export class IntroComponent {
     return 'my-app';
   }
 
+  constructor(private router: Router) {
+  }
+
   toggleDisplay(): void {
     this.display = !this.display;
+  }
+
+  goToHome() {
+    // implement navigation
+    this.router.navigateByUrl('/home');
   }
 }

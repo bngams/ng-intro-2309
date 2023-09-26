@@ -4,8 +4,11 @@
 
   <nav>
     <ul id="main-menu">
-      <li class="menu-item">Home</li>
-      <li class="menu-item">Intro</li>
+      <!--  routerLinkActive="className" => class to add when routerLink route is active -->
+      <li class="menu-item"><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <!-- routerLink can be done everywhere => better on a (HTML convention) -->
+      <li class="menu-item" routerLink="/intro"  routerLinkActive="active">Intro</li>
+      <li class="menu-item"><a routerLink="/admin" routerLinkActive="active">Admin </a></li>
     </ul>
   </nav>
 </mat-toolbar>

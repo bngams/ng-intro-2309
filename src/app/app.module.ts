@@ -8,6 +8,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { IntroComponent } from './pages/intro/intro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HomeComponent } from './pages/home/home.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   // customelements.define('app-root', ...)
@@ -15,7 +17,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppComponent,
     ExponentialStrengthPipe,
     HeaderComponent,
-    IntroComponent
+    IntroComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   // autres fonctionnalités
   imports: [
@@ -23,6 +27,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule, // availble for all this module
+    // AdminModule, // => NO => lazy load
   ],
   providers: [],
   // composants à charger au démarrage
