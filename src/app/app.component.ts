@@ -10,17 +10,4 @@ import { Component } from '@angular/core'; // reférence les classes ou fichiers
 })
 // export <=> public
 export class AppComponent { // controller
-
-  today = new Date();
-  display = true;
-
-  words = ['hello', 'world', '!!!'];
-
-  get title(){
-    return 'my-app';
-  }
-
-  toggleDisplay(): void {
-    this.display = !this.display;
-  }
 }
