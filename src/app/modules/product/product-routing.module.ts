@@ -4,6 +4,7 @@ import { ProductDashboardComponent } from './pages/product-dashboard/product-das
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  // URL abs => /products/dashboard
   { path: 'dashboard', component: ProductDashboardComponent}
 ];
 

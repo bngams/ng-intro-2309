@@ -16,6 +16,7 @@ export class IntroComponent {
     return 'my-app';
   }
 
+  // DI with constructor
   constructor(private router: Router) {
   }
 
