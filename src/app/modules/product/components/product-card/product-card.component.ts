@@ -10,4 +10,10 @@ export class ProductCardComponent {
   // property binding [product]
   @Input()
   product!: Product;
+
+  // DI
+  // constructor()
+
+  // Init
+  // ngOnInit()
 }

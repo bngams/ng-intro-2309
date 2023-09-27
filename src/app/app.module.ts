@@ -31,7 +31,7 @@ import { ThemeModule } from './modules/theme.module';
     // ...MATERIAL_MODULES => barrel
     // AdminModule, // => NO => lazy load
   ],
-  providers: [],
+  providers: [], // Module Injector
   // composants à charger au démarrage
   bootstrap: [AppComponent]
 })

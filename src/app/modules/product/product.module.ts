@@ -7,6 +7,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductDashboardComponent } from './pages/product-dashboard/product-dashboard.component';
 import { ThemeModule } from 'src/app/modules/theme.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ThemeModule } from 'src/app/modules/theme.module';
   imports: [
     CommonModule,
     ProductRoutingModule,
-    ThemeModule
+    ThemeModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductModule { }
