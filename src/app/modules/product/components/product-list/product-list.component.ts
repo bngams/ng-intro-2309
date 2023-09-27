@@ -14,6 +14,8 @@ export class ProductListComponent implements OnInit {
 
   private somePrivate! : string;
 
+  private loading = false;
+
   @Input()
   productsInput!: Product[];
 
@@ -27,6 +29,19 @@ export class ProductListComponent implements OnInit {
 
   // init products
   ngOnInit(): void {
-    this.products = this.productsService.products;
+    // this.loadFromService();
+    this.loadProducts();
+  }
+
+  loadProducts(): void {
+    this.loading = true;
+    this.productsService.getProducts().subscribe(res => {
+      this.products = res.products;
+      this.loading = false; // /!\ error / complete // ou timeout
+    })
+  }
+
+  loadFromService(): void {
+    this.productsService.loadProducts();
   }
 }

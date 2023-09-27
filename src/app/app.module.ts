@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MATERIAL_MODULES } from './modules/material.barrel';
 import { ThemeModule } from './modules/theme.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   // customelements.define('app-root', ...)
@@ -25,6 +26,7 @@ import { ThemeModule } from './modules/theme.module';
   // autres fonctionnalités
   imports: [
     BrowserModule,
+    HttpClientModule, //
     AppRoutingModule,
     BrowserAnimationsModule,
     ThemeModule // "Shared" Module => export to feature to multiple parts
