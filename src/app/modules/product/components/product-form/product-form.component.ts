@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, UntypedFormGroup, Validators } from '@angular/forms';
 import { Product } from '../../models/product';
+import { ProductService } from '../../services/product.service';
 
 /**
  * Source: https://betterprogramming.pub/how-to-build-a-strongly-typed-angular-14-super-form-86837965a0e5
@@ -30,10 +31,18 @@ export class ProductFormComponent {
     price: new FormControl(0, {nonNullable: true, validators: [Validators.required, Validators.min(1)]})
   });
 
+  constructor(private productService: ProductService) { }
+
   submit(): void {
     // let vs const
     const product: Product = this.productForm.value;
+
     // debugger vs console.log(product)
-    this.productSubmit.emit(product);
+
+    // with @Output()
+    // this.productSubmit.emit(product);
+
+    // with service (@Injectable)
+    this.productService.products.push(product);
   }
 }

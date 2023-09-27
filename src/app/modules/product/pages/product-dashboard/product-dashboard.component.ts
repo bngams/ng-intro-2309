@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Product } from '../../models/product';
 import { ProductListComponent } from '../../components/product-list/product-list.component';
+import { PRODUCTS_MOCK } from '../../mocks/products.mock';
 
 @Component({
   selector: 'app-product-dashboard',
@@ -13,11 +14,7 @@ export class ProductDashboardComponent {
   @ViewChild(ProductListComponent)
   productList!: ProductListComponent;
 
-  products: Product[] = [
-    { title: 'product 1', price: 10 },
-    { title: 'product 2', price: 20 },
-    { title: 'product 3', price: 30 },
-  ]
+  products: Product[] = PRODUCTS_MOCK;
 
   addProduct(product: Product): void {
     // add product to list
